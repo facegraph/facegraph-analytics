@@ -17,6 +17,6 @@ class LogController < ApplicationController
       UserLog.update(user.id, friend.id, controller_action.id)
     end
 
-    render :json => {:message => "Logged"}
+    render :json => {params[:callback] => "Logged"}
   end
 end
